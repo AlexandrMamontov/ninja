@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script defer src="js/plugin.js"></script>
+    <script defer src="js/script.js"></script>
+</head>
+
+<body>
+    <header class="header" id="header">
+        <div class="container header__container">
+            <img src="img/logo-header.png" alt="" width="187" height="70" class="header__logo">
+            <nav class="header__nav nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#about" class="nav__link">О проекте</a></li>
+                    <li class="nav__item"><a href="#tracks" class="nav__link">Трассы</a></li>
+                    <li class="nav__item"><a href="#rates" class="nav__link">Тарифы</a></li>
+                    <li class="nav__item"><a href="#news" class="nav__link">Новости</a></li>
+                    <li class="nav__item"><a href="#rating" class="nav__link">Рейтинг</a></li>
+                    <li class="nav__item"><a href="#questions" class="nav__link">Вопрос-ответ</a></li>
+                    <li class="nav__item"><a href="#location" class="nav__link">Как нас найти?</a></li>
+                </ul>
+            </nav>
+            <button class="btn header__btn">Записаться</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" id="hero">
+            <div class="container hero__container">
+                <div class="hero__top">
+                    <img src="img/ninja-kids.svg" alt="" width="384" height="220" class="hero__img">
+                    <div class="hero__block">
+                        <p class="hero__text subtitle">
+                            Попробуй свои силы на&nbsp;полосе препятствий!
+                        </p>
+                        <div class="hero__btns">
+                            <button class="btn hero__btn">Хочу участвовать</button>
+                            <button class="btn hero__btn btn-more">Узнать больше</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero__bottom">
+                    <div class="hero__video">
+                        <video id="hero-video" poster="img/video-cover.png" playsinline="" webkit-playsinline="">
+                            <source src="video/Skan-Run.mp4" type="video/mp4">
+                        </video>
+                        <button class="hero__play">
+                            <img src="img/video-play.svg" alt="" width="105" height="105">
+                        </button>
+                    </div>
+                    <ul class="hero__list">
+                        <li class="hero__item">
+                            <div class="hero__step">
+                                <img src="img/step1.svg" alt="" width="95" height="96" class="hero__svg">
+                                <h3 class="hero__subtitle subtitle">1 этап</h3>
+                                <p class="hero__date text">05.07.2025</p>
+                                <p class="hero__name subtitle">Попробуй себя</p>
+                            </div>
+                        </li>
+                        <li class="hero__item">
+                            <div class="hero__step">
+                                <img src="img/step2.svg" alt="" width="95" height="96" class="hero__svg">
+                                <h3 class="hero__subtitle subtitle">2 этап</h3>
+                                <p class="hero__date text">15.08.2025</p>
+                                <p class="hero__name subtitle">Победи соперника</p>
+                            </div>
+                        </li>
+                        <li class="hero__item">
+                            <div class="hero__step">
+                                <img src="img/step3.svg" alt="" width="95" height="96" class="hero__svg">
+                                <h3 class="hero__subtitle subtitle">3 этап</h3>
+                                <p class="hero__date text">20.09.2025</p>
+                                <p class="hero__name subtitle">Минута славы</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="about" id="about">
+            <div class="container about__container">
+                <div class="about__left">
+                    <h2 class="title about__title">О проекте</h2>
+                    <p class="about__text text">
+                        Проект «Ниндзя дети» — это полоса препятствий для детей разных возрастов
+                        от&nbsp;6&nbsp;до&nbsp;17&nbsp;лет
+                    </p>
+                    <p class="about__text text">
+                        Участникам предстоит соревноваться со своими сверстниками в скорости и&nbsp;ловкости на трассе с
+                        препятствиями
+                    </p>
+                    <p class="about__text text">
+                        Идея проекта возникла ... “Одни из нас”
+                    </p>
+                </div>
+                <div class="about__right">
+                    <div class="about__card">
+                        <h3 class="about__subtitle">2022</h3>
+                        <p class="text about__descr">
+                            Первый запуск проекта
+                        </p>
+                    </div>
+                    <div class="about__card">
+                        <h3 class="about__subtitle">1&nbsp;500</h3>
+                        <p class="text about__descr">Средний охват участников</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="tracks" id="tracks">
+            <div class="container">
+                <div class="tracks__container container">
+                    <div class="tracks__wrapper">
+                        <div class="tracks__block block">
+                            <h2 class="title tracks__title">Трассы</h2>
+                            <p class="tracks__text text">
+                                Трассы разного уровня сложности, каждый этап трасса видоизменяется
+                            </p>
+                        </div>
+                        <div class="tracks__buttons">
+                            <button class="tracks__prev"></button>
+                            <button class="tracks__next"></button>
+                        </div>
+                    </div>
+                    <div class="tracks__slider swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="img/tracks1.png" alt="" width="580" height="350" class="tracks__photo">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/tracks2.png" alt="" width="580" height="350" class="tracks__photo">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/tracks1.png" alt="" width="580" height="350" class="tracks__photo">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/tracks2.png" alt="" width="580" height="350" class="tracks__photo">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="rates" id="rates">
+            <div class="container">
+                <h2 class="title rates__title">Тарифы</h2>
+            </div>
+            <div class="rates__container">
+                <div class="container">
+                    <div class="rates__slider">
+                        <div class="rates__card">
+                            <div class="rates__content">
+                                <div class="rates__age">6-8 лет</div>
+                                <h3 class="rates__subtitle">Ninja Дети</h3>
+                                <p class="rates__text text">Стоимость указана за участие в 1 этапе</p>
+                            </div>
+                            <div class="rates__info">
+                                <p class="rates__price">700 руб</p>
+                                <button class="btn rates__btn">Хочу участвовать</button>
+                            </div>
+                        </div>
+                        <div class="rates__card">
+                            <div class="rates__content">
+                                <div class="rates__age">9-10 лет</div>
+                                <h3 class="rates__subtitle">Ninja Дети</h3>
+                                <p class="rates__text text">Стоимость указана за участие в 1 этапе</p>
+                            </div>
+                            <div class="rates__info">
+                                <p class="rates__price">700 руб</p>
+                                <button class="btn rates__btn">Хочу участвовать</button>
+                            </div>
+                        </div>
+                        <div class="rates__card">
+                            <div class="rates__content">
+                                <div class="rates__age">11-12 лет</div>
+                                <h3 class="rates__subtitle">Ninja Дети</h3>
+                                <p class="rates__text text">Стоимость указана за участие в 1 этапе</p>
+                            </div>
+                            <div class="rates__info">
+                                <p class="rates__price">700 руб</p>
+                                <button class="btn rates__btn">Хочу участвовать</button>
+                            </div>
+                        </div>
+                        <div class="rates__card">
+                            <div class="rates__content">
+                                <div class="rates__age">13-15 лет</div>
+                                <h3 class="rates__subtitle">Ninja Дети</h3>
+                                <p class="rates__text text">Стоимость указана за участие в 1 этапе</p>
+                            </div>
+                            <div class="rates__info">
+                                <p class="rates__price">700 руб</p>
+                                <button class="btn rates__btn">Хочу участвовать</button>
+                            </div>
+                        </div>
+                        <div class="rates__card">
+                            <div class="rates__content">
+                                <div class="rates__age">16-17 лет</div>
+                                <h3 class="rates__subtitle">Ninja Дети</h3>
+                                <p class="rates__text text">Стоимость указана за участие в 1 этапе</p>
+                            </div>
+                            <div class="rates__info">
+                                <p class="rates__price">700 руб</p>
+                                <button class="btn rates__btn">Хочу участвовать</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="news" id="news">
+            <div class="container news__container">
+                <div class="news__block block">
+                    <h2 class="title news__title">Новости</h2>
+                    <p class="news__text text">
+                        Мы стараемся публиковать все новости оперативно и информативно
+                    </p>
+                </div>
+                <div class="news__wrapper">
+                    <div class="news__card">
+                        <div class="news__visual" style="background-image: url('img/news1.png');">
+                            <a href="#" class="news__link"></a>
+                        </div>
+                        <div class="news__info">
+                            <h3 class="text news__name">Название новости</h3>
+                            <p class="news__descr">
+                                Мини-описание новости Мини-описание новости Мини-описание новости
+                            </p>
+                        </div>
+                    </div>
+                    <div class="news__card full">
+                        <div class="news__visual" style="background-image: url('img/news2.png');">
+                            <a href="#" class="news__link"></a>
+                        </div>
+                        <div class="news__info">
+                            <h3 class="text news__name">Название новости</h3>
+                            <p class="news__descr">
+                                Мини-описание новости Мини-описание новости Мини-описание новости Мини-описание новости
+                                Мини-описание новости Мини-описание новости
+                            </p>
+                        </div>
+                    </div>
+                    <div class="news__card">
+                        <div class="news__visual" style="background-image: url('img/news3.png');">
+                            <a href="#" class="news__link"></a>
+                        </div>
+                        <div class="news__info">
+                            <h3 class="text news__name">Название новости</h3>
+                            <p class="news__descr">
+                                Мини-описание новости Мини-описание новости Мини-описание новости
+                            </p>
+                        </div>
+                    </div>
+                    <div class="news__card">
+                        <div class="news__visual" style="background-image: url('img/news4.png');">
+                            <a href="#" class="news__link"></a>
+                        </div>
+                        <div class="news__info">
+                            <h3 class="text news__name">Название новости</h3>
+                            <p class="news__descr">
+                                Мини-описание новости Мини-описание новости Мини-описание новости
+                            </p>
+                        </div>
+                    </div>
+                    <div class="news__card">
+                        <div class="news__visual" style="background-image: url('img/news5.png');">
+                            <a href="#" class="news__link"></a>
+                        </div>
+                        <div class="news__info">
+                            <h3 class="text news__name">Название новости</h3>
+                            <p class="news__descr">
+                                Мини-описание новости Мини-описание новости Мини-описание новости
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="rating" id="rating">
+            <div class="container rating__container">
+                <h2 class="title rating__title">Рейтинг</h2>
+                <form action="#" class="rating__form">
+                    <div class="rating__ages">
+                        <div class="rating__btn">
+                            <input id="radio-1" class="rating__input" type="radio" name="radio" value="1" checked>
+                            <label class="rating__label" for="radio-1">6-8 лет</label>
+                        </div>
+                        <div class="rating__btn">
+                            <input id="radio-2" class="rating__input" type="radio" name="radio" value="2">
+                            <label class="rating__label" for="radio-2">9-10 лет</label>
+                        </div>
+                        <div class="rating__btn">
+                            <input id="radio-3" class="rating__input" type="radio" name="radio" value="3">
+                            <label class="rating__label" for="radio-3">11-12 лет</label>
+                        </div>
+                        <div class="rating__btn">
+                            <input id="radio-4" class="rating__input" type="radio" name="radio" value="4">
+                            <label class="rating__label" for="radio-4">13-15 лет</label>
+                        </div>
+                        <div class="rating__btn">
+                            <input id="radio-5" class="rating__input" type="radio" name="radio" value="5">
+                            <label class="rating__label" for="radio-5">16-17 лет</label>
+                        </div>
+                    </div>
+                    <div class="rating__steps">
+                        <select name="select" id="select" class="rating__select">
+                            <option value="1">1 этап</option>
+                            <option value="2">2 этап</option>
+                            <option value="3">3 этап</option>
+                        </select>
+                        <img src="img/arrow-down.svg" alt="" width="16" height="16" class="rating__arrow">
+                    </div>
+                </form>
+                <table class="rating__table table">
+                    <thead>
+                        <tr class="table__header">
+                            <th class="table__number">№</th>
+                            <th class="table__fio">ФИО</th>
+                            <th class="table__time">Время</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="table__row">
+                            <td class="table__number">1</td>
+                            <td class="table__fio">Сидоров Сергей Петрович</td>
+                            <td class="table__time">14:30:45</td>
+                        </tr>
+                        <tr class="table__row">
+                            <td class="table__number">2</td>
+                            <td class="table__fio">Петрова Анна Васильевна</td>
+                            <td class="table__time">09:05:10</td>
+                        </tr>
+                        <tr class="table__row">
+                            <td class="table__number">3</td>
+                            <td class="table__fio">Кузнецов Алексей Николаевич</td>
+                            <td class="table__time">18:22:33</td>
+                        </tr>
+                        <tr class="table__row">
+                            <td class="table__number">4</td>
+                            <td class="table__fio">Смирнова Ольга Дмитриевна</td>
+                            <td class="table__time">07:15:59</td>
+                        </tr>
+                        <tr class="table__row">
+                            <td class="table__number">5</td>
+                            <td class="table__fio">Федоров Максим Андреевич</td>
+                            <td class="table__time">23:45:01</td>
+                        </tr>
+                        <tr class="table__row">
+                            <td class="table__number">6</td>
+                            <td class="table__fio">Лебедев Ирина Сергеевна</td>
+                            <td class="table__time">11:11:11</td>
+                        </tr>
+                        <tr class="table__row">
+                            <td class="table__number">7</td>
+                            <td class="table__fio">Морозов Виктор Павлович</td>
+                            <td class="table__time">16:50:25</td>
+                        </tr>
+                        <tr class="table__row">
+                            <td class="table__number">8</td>
+                            <td class="table__fio">Соловьев Наталья Александровна</td>
+                            <td class="table__time">03:30:00</td>
+                        </tr>
+                        <tr class="table__row">
+                            <td class="table__number">9</td>
+                            <td class="table__fio">Васильев Дмитрий Владимирович</td>
+                            <td class="table__time">20:15:15</td>
+                        </tr>
+                        <tr class="table__row">
+                            <td class="table__number">10</td>
+                            <td class="table__fio">Ковалев Юлия Игоревна</td>
+                            <td class="table__time">01:00:00</td>
+                        </tr>
+                        <tr class="table__row">
+                            <td class="table__number">11</td>
+                            <td class="table__fio">Тихонов Роман Викторович</td>
+                            <td class="table__time">12:59:59</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="questions" id="questions">
+            <div class="container questions__container">
+                <h2 class="title questions__title">Вопрос-ответ</h2>
+                <div class="questions__wrapper">
+                    <div class="questions__images">
+                        <img src="img/questions1.png" alt="" width="580" height="319" class="questions__photo">
+                        <img src="img/questions2.png" alt="" width="580" height="227" class="questions__photo">
+                    </div>
+                    <ul class="questions__list">
+                        <li class="questions__item">
+                            <h3 class="questions__header text active">
+                                Strateg Ninja Kids
+                            </h3>
+                            <div class="questions__block active">
+                                <p class="questions__text descr">
+                                    Полоса препятствий для детей разных возрастов
+                                </p>
+                            </div>
+                        </li>
+                        <li class="questions__item">
+                            <h3 class="questions__header text">
+                                Возрастные категории
+                            </h3>
+                            <div class="questions__block">
+                                <p class="questions__text descr">
+                                    Участникам предстоит посоревноваться в скорости прохождения трассы с препятствиями
+                                    со
+                                    своими сверстниками, в возрастных категориях:
+                                </p>
+                                <p class="questions__text descr">
+                                    - от 6 до 8 лет
+                                </p>
+                                <p class="questions__text descr">
+                                    - от 9 до 10 лет
+                                </p>
+                                <p class="questions__text descr">
+                                    - от 11 до 12 лет
+                                </p>
+                                <p class="questions__text descr">
+                                    - от 13 до 15 лет
+                                </p>
+                                <p class="questions__text descr">
+                                    - от 16 до 17 лет
+                                </p>
+                            </div>
+                        </li>
+                        <li class="questions__item">
+                            <h3 class="questions__header text">
+                                Как узнать, пройдет ли Ваш маленький герой полосу препятствий безопасно для себя?
+                            </h3>
+                            <div class="questions__block">
+                                <p class="questions__text descr">
+                                    Предлагаем такие тесты как:
+                                </p>
+                                <p class="questions__text descr">
+                                    1. Умение сделать кувырок вперед и назад.
+                                </p>
+                                <p class="questions__text descr">
+                                    2. Вис на перекладине для возрастных категорий 6-8, 9-10 лет не менее 50 секунд, для
+                                    возрастных категорий 11-12, 13-15 и 16-17 лет не менее 60 секунд.
+                                </p>
+                                <p class="questions__text descr">
+                                    3. Челночный бег 3*10 метров для возрастной категории 6-8 лет не дольше 10,6 сек,
+                                    8-9 лет не дольше 9,9 сек, 11-12 лет не дольше 9,4 сек, 13-15 лет не дольше 9 сек,
+                                    16-17 лет не дольше 8,9 сек</p>
+                            </div>
+                        </li>
+                        <li class="questions__item">
+                            <h3 class="questions__header text">
+                                Нужно ли участвовать во всех отборочных этапах?
+                            </h3>
+                            <div class="questions__block">
+                                <p class="questions__text descr">
+                                    Нет, достаточно поучаствовать в одном отборочном этапе, победители в своих
+                                    возрастных категориях будут приглашены на Финал.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="questions__item">
+                            <h3 class="questions__header text">
+                                Будут ли отличаться друг от друга отборочные этапы?
+                            </h3>
+                            <div class="questions__block">
+                                <p class="questions__text descr">
+                                    Отборочные этапы будут одинаковые по набору этапов, но вполне возможно различные по
+                                    конкуренции, зная этапы и задания люди смогут чуть лучше подготовиться. Подготовка и
+                                    конкуренция, от этапа к этапу будет повышаться.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="questions__item">
+                            <h3 class="questions__header text">
+                                Насколько сложная полоса препятствий?
+                            </h3>
+                            <div class="questions__block">
+                                <p class="questions__text descr">
+                                    Вся система отборочных туров и финала придумана для того, что бы дать попробовать
+                                    свои силы большому количеству детей, дать им возможность и стимул подготовиться,
+                                    отобрать лучших на доступных большинству этапах и в финале проверить возможности на
+                                    зрелищных и сложных этапах! Поэтому на отборочных этапах будет вполне выполнимая,
+                                    для большинства, полоса препятствий.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="questions__item">
+                            <h3 class="questions__header text">
+                                Какие будут задания и из чего состоит полоса препятствий?
+                            </h3>
+                            <div class="questions__block">
+                                <p class="questions__text descr">
+                                    Старт - По сигналу судьи участники парами начинают гонку на стартовой линии.
+                                </p>
+                                <p class="questions__text descr">
+                                    1. Горизонтальный канат - Участникам необходимо силой рук, не касаясь ногами пола
+                                    пролезть по горизонтальному канату длиной 4 метра.
+                                </p>
+                                <p class="questions__text descr">
+                                    2. Кольца и вертикальные канаты - Участникам предстоит преодолеть этап, состоящий из
+                                    вертикально подвешенных канатов, с узелком в нижней части, на который можно встать
+                                    ногами и гимнастическими кольцами, за которые необходимо будет держаться руками. На
+                                    этапе запрещено касаться ногами пола.
+                                </p>
+                                <p class="questions__text descr">
+                                    3. Скамейки и тумбы - На этапе, чередуясь будут установлены скамейки, под которыми
+                                    необходимо будет пролезать и высокие тумбы, через которые необходимо будет
+                                    перелезать.
+                                </p>
+                                <p class="questions__text descr">
+                                    4. Шалаш с канатами - Участникам необходимо будет подняться на этап, упираясь ногами
+                                    в наклонную поверхность шалаша и держась руками за короткие канаты, прикрепленные к
+                                    верней его части преодолеть этап.
+                                </p>
+                                <p class="questions__text descr">
+                                    5. Планка в распор - Этап состоит из наклонных плоскостей, упираясь в одну ногами, в
+                                    другую руками, участникам необходимо будет преодолеть этап не касаясь пола.
+                                </p>
+                                <p class="questions__text descr">
+                                    8. Ногоход - Этап представляет из себя подвешенные на цепочках подвижные ступени, по
+                                    которым необходимо пройти не падая на пол.
+                                </p>
+                                <p class="questions__text descr">
+                                    9. Рукоход - Этап представляет из себя подвешенные кольца, по которым, цепляясь
+                                    руками необходимо пройти. Касаться пола запрещено.
+                                </p>
+                                <p class="questions__text descr">
+                                    10. Барьеры - На этапе будут установлены барьеры, которые необходимо перешагивать
+                                    или перепрыгивать, запрещено сбивать или оббегать барьеры.
+                                </p>
+                                <p class="questions__text descr">
+                                    11. Сеть - На малом расстоянии от пола будет натянута сеть, под которой необходимо
+                                    пролезть участникам.
+                                </p>
+                                <p class="questions__text descr">
+                                    14. Кочки - Этап представляет из себя наклонные плоскости, по которым необходимо
+                                    будет перепрыгивать, касание пола запрещено.
+                                </p>
+                                <p class="questions__text descr">
+                                    16. Финиш - Участникам необходимо будет пересечь финишную линию.
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" id="footer">
+        <div class="container footer__container">
+        </div>
+    </footer>
+</body>
+
+</html>
