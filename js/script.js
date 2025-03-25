@@ -13,6 +13,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 playBtn.classList.remove('hidden');
             }
         })
+        // при завершении видео показываем кнопку "плэй" и обложку
+        video.addEventListener('ended', () => {
+            video.load();
+            playBtn.classList.remove('hidden');
+        });
     }
 
     // слайдер "Трассы"
@@ -29,14 +34,11 @@ document.addEventListener('DOMContentLoaded', function() {
             observeParents: true,
             observeSlideChildren: true,
             breakpoints: {
-                768: {
+                769: {
                     slidesPerView: 2
                 },
-                576: {
-                    slidesPerView: 1.5
-                },
                 0: {
-                    slidesPerView: 1
+                    slidesPerView: 1.2
                 }
             }
         })
@@ -55,4 +57,47 @@ document.addEventListener('DOMContentLoaded', function() {
             body.classList.toggle('active');
         })
     })
+
+    // карта
+    ymaps.ready(init);
+    function init() {
+        var myMap = new ymaps.Map("location__map", {
+            center: [61.642203, 50.803134],
+            zoom: 16
+        }, {
+            searchControlProvider: 'yandex#search'
+        });
+        var myPlacemark = new ymaps.Placemark([61.642203, 50.803134], null, {
+            preset: 'islands#blueDotIcon'
+        });
+        myMap.geoObjects.add(myPlacemark);
+    }
+
+    // бургер-меню
+    const burgerOpen = document.querySelector('.header__burger');
+    const burgerClose = document.querySelector('.header__close');
+    const burgerMenu = document.querySelector('.header__nav');
+    const menuLinks = document.querySelectorAll('.nav__link');
+    const headerBtn = document.querySelector('.header__btn');
+    if (burgerOpen && burgerClose && burgerMenu && menuLinks && headerBtn) {
+        burgerOpen.addEventListener('click', function() {
+            burgerMenu.classList.add('active');
+        })
+        burgerClose.addEventListener('click', function() {
+            burgerMenu.classList.remove('active');
+        })
+        menuLinks.forEach((menuLink) => {
+            menuLink.addEventListener('click', function() {
+                burgerMenu.classList.remove('active');
+            })
+        })
+        headerBtn.addEventListener('click', function() {
+            burgerMenu.classList.remove('active');
+        })
+        document.addEventListener('click', function(e) {
+            if (!e.target.closest('.header__nav, .header__burger')) {
+                burgerMenu.classList.remove('active');
+            }
+        });
+    }
 })

@@ -113,6 +113,10 @@
     margin-bottom: 20px;
 }
 
+.about__text:last-child {
+    margin-bottom: 0;
+}
+
 .about__right {
     max-width: 376px;
     width: 100%;
@@ -145,8 +149,10 @@
 .tracks__wrapper {
     margin-bottom: 30px;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
+    gap: 16px;
 }
 
 .tracks__text {
@@ -161,14 +167,14 @@
 
 .tracks__prev,
 .tracks__next {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 60px;
     height: 60px;
     background-color: #FDF9FF;
     border-radius: 50%;
     border: 1px solid #812A9C;
-    background-image: url('../img/arrow-right.svg');
-    background-position: center;
-    background-repeat: no-repeat;
 }
 
 .tracks__prev {
@@ -180,11 +186,24 @@
     border-color: #D9D9D9;
 }
 
+.tracks__prev img,
+.tracks__next img {
+    width: 18px;
+    height: 18px;
+}
+
+.tracks__slider-container {
+    margin: 0 -60px;
+    overflow: hidden;
+}
+
 .tracks__slider {
+    margin-left: 60px;
     overflow: hidden;
 }
 
 .tracks__photo {
+    width: 100%;
     border-radius: 16px;
 }
 
@@ -259,6 +278,8 @@
 /* news */
 .news__block {
     margin-bottom: 40px;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .news__text {
@@ -273,6 +294,8 @@
 }
 
 .news__card {
+    display: flex;
+    flex-direction: column;
     width: calc((100% - 20px * 2) / 3);
     height: auto;
 }
@@ -283,8 +306,9 @@
 
 .news__visual {
     position: relative;
-    height: 227px;
+    min-height: 227px;
     border-radius: 20px 20px 0 0;
+    background-color: #D9D9D9;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -305,6 +329,7 @@
 
 .news__info {
     padding: 24px 20px;
+    height: 100%;
     display: flex;
     flex-direction: column;
     gap: 18px;
@@ -333,12 +358,15 @@
 .rating__form {
     margin-bottom: 40px;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
+    gap: 21px;
 }
 
 .rating__ages {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     gap: 8px;
 }
@@ -349,6 +377,7 @@
 
 .rating__label {
     cursor: pointer;
+    display: block;
 	padding: 10px 20px;
 	border: 1px solid #1EB42033;
     background-color: #fff;
@@ -418,6 +447,10 @@
     border-bottom: 1px solid #F7F0F9;
 }
 
+.table__fio {
+    padding-right: 9px;
+}
+
 .table__time {
     text-align: right;
 }
@@ -425,7 +458,7 @@
 /* questions */
 .questions__title {
     margin: 0;
-    margin-bottom: 40px;
+    margin-bottom: 52px;
 }
 
 .questions__wrapper {
@@ -435,13 +468,19 @@
 }
 
 .questions__images {
+    max-width: 580px;
     width: 100%;
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
+.questions__images.mobile {
+    display: none;
+}
+
 .questions__photo {
+    width: 100%;
     border-radius: 16px;
 }
 
@@ -496,4 +535,332 @@
 
 .questions__text {
     font-weight: 600;
+}
+
+/* location */
+.location__container {
+    padding: 0;
+}
+
+.location__title {
+    margin-bottom: 84px;
+}
+
+.location__list {
+    margin-bottom: 56px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.location__wrapper {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.location__img {
+    width: 24px;
+    height: 24px;
+}
+
+.location__block {
+    display: flex;
+    flex-direction: column;
+}
+
+.location__text {
+    margin: 0;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 130%;
+}
+
+.wrapper-media {
+    gap: 8px;
+}
+
+.wrapper-media a {
+    width: 41px;
+    height: 41px;
+    display: block;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.location__vk {
+    background-image: url('../img/vk.svg');
+}
+
+.location__tg {
+    background-image: url('../img/tg.svg');
+}
+
+.location__inst {
+    background-image: url('../img/inst.svg');
+}
+
+.location__map {
+    width: 100%;
+    height: 480px;
+    border-radius: 24px;
+    overflow: hidden;
+}
+
+.location__map>ymaps,
+.location__map>ymaps>ymaps {
+    width: 100% !important;
+}
+
+@media screen and (max-width: 1600px) {
+    .hero__video {
+        margin: 0 -60px;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .hero__top {
+        margin-bottom: 50px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hero__img {
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+
+    .hero__block {
+        margin-bottom: 0;
+        width: fit-content;
+        flex-wrap: wrap;
+        gap: 39px;
+    }
+
+    .hero__video {
+        border-radius: 0;
+    }
+
+    .hero__list {
+        margin-top: 50px;
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    .hero__item {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .hero__img {
+        width: 271px;
+        height: 163px;
+    }
+    
+    .about__container {
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    .about__left,
+    .about__right {
+        max-width: 100%;
+    }
+
+    .about__right {
+        flex-direction: row;
+    }
+
+    .about__card {
+        width: 100%;
+    }
+
+    .tracks>.container {
+        padding-top: 77px;
+        padding-bottom: 77px;
+        border-radius: 0;
+    }
+
+    .tracks__wrapper {
+        align-items: flex-end;
+    }
+
+    .news__wrapper {
+        gap: 16px;
+    }
+
+    .news__card,
+    .news__card.full {
+        width: calc((100% - 20px) / 2);
+    }
+
+    .table-container {
+        padding: 0;
+    }
+
+    .rating__table {
+        padding-left: 60px;
+        padding-right: 60px;
+        border-radius: 0;
+    }
+
+    .questions__wrapper {
+        flex-direction: column;
+    }
+
+    .questions__images {
+        max-width: 100%;
+    }
+
+    .questions__images:not(.mobile) .questions__photo:last-child {
+        display: none;
+    }
+
+    .questions__images.mobile {
+        display: block;
+    }
+
+    .location {
+        margin-bottom: 0;
+    }
+
+    .location__map {
+        height: 500px;
+        border-radius: 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #hero-video {
+        height: 530px;
+    }
+
+    .tracks__slider {
+        overflow: visible;
+    }
+
+    .tracks__wrapper {
+        margin-bottom: 40px;
+    }
+
+    .tracks__prev, .tracks__next {
+        width: 40px;
+        height: 40px;
+    }
+
+    .tracks__prev img,
+    .tracks__next img {
+        width: 12px;
+        height: 12px;
+    }
+
+    .rating__form {
+        margin-bottom: 20px;
+    }
+
+    .location__title {
+        margin-bottom: 45px;
+    }
+
+    .location__list {
+        margin-bottom: 46px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .news__wrapper {
+        flex-direction: column;
+    }
+
+    .news__card, .news__card.full {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .hero__top {
+        margin-bottom: 27px;
+    }
+
+    .hero__btns {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .hero__btn {
+        width: 100%;
+    }
+
+    .hero__video,
+    .tracks__slider-container {
+        margin: 0 -24px;
+    }
+
+    #hero-video {
+        height: 500px;
+    }
+
+    .hero__list {
+        margin-top: 72px;
+    }
+
+    .about__right {
+        flex-direction: column;
+    }
+
+    .tracks>.container {
+        padding-top: 32px;
+        padding-bottom: 38px;
+    }
+
+    .tracks__slider {
+        margin-left: 24px;
+    }
+
+    .news__block {
+        margin-bottom: 46px;
+        gap: 24px;
+    }
+
+    .rating {
+        margin-bottom: 20px;
+    }
+
+    .rating__table {
+        padding-right: 24px;
+        padding-left: 24px;
+        font-size: 12px;
+    }
+
+    .table__header th {
+        padding-bottom: 16px;
+        font-size: 14px;
+    }
+
+    .table__header th.table__fio {
+        padding-left: 15px;
+    }
+
+    .table__number, .table__fio, .table__time {
+        padding-top: 14px;
+    }
+
+    .rating__form {
+        margin-bottom: 16px;
+        gap: 18px;
+    }
+
+    .questions__title {
+        margin-bottom: 25px;
+    }
+
+    .location__list {
+        margin-bottom: 28px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }

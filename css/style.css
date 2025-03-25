@@ -112,6 +112,32 @@ section {
     gap: 67px;
 }
 
+.header__logo {
+    border-radius: 8px;
+}
+
+.header__nav {
+    display: flex;
+    align-items: center;
+    gap: 67px;
+}
+
+.header__burger,
+.header__close {
+    display: none;
+    min-width: 22px;
+    height: 14px;
+    background-image: url('../img/burger-open.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.header__close {
+    min-width: 17px;
+    height: 17px;
+    background-image: url('../img/burger-close.svg');
+}
+
 .nav__list {
     display: flex;
     align-items: center;
@@ -125,15 +151,219 @@ section {
 }
 
 /* footer */
+.footer {
+    padding-top: 71px;
+    padding-bottom: 120px;
+    background-color: #12001A;
+}
+
+.footer__container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.footer__image {
+    margin-right: 120px;
+}
+
+.footer__logo {
+    min-width: 180px;
+    border-radius: 8px;
+}
+
+.footer__block,
+.footer__wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__column {
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.footer__column.column-center {
+    margin-right: 150px;
+    margin-left: 179px;
+}
+
+.footer__column.column-right {
+    max-width: 280px;
+    width: 100%;
+}
+
+.footer__link {
+    font-size: 14px;
+    line-height: 100%;
+    color: #fff;
+    white-space: nowrap;
+}
+
+.footer__form {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.footer__input {
+    padding-bottom: 9px;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #FFFFFF80;
+    outline: none;
+    font-size: 12px;
+    line-height: 100%;
+    color: #FFFFFF80;
+}
+
+.footer__submit {
+    padding-top: 11px;
+    padding-bottom: 11px;
+    font-size: 12px;
+}
+
+@media screen and (max-width: 1600px) {
+    .container {
+        padding: 0 60px;
+    }
+
+    .header__container,
+    .header__nav {
+        gap: 35px;
+    }
+}
+
+@media screen and (max-width: 1366px) {
+    .footer__container,
+    .footer__wrapper,
+    .footer__block {
+        gap: 45px;
+    }
+
+    .footer__image,
+    .footer__column.column-center {
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .header__nav {
+        position: fixed;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: 10;
+        padding: 58px 60px;
+        max-width: 375px;
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-end;
+        background-color: #FDF9FF;
+        box-shadow: 0px 0px 100px 0px #AA00FF26;
+        transform: translateX(120%);
+        transition: transform .3s ease-in-out;
+    }
+
+    .header__nav.active {
+        transform: translateX(0);
+        transition: transform .3s ease-in-out;
+    }
+
+    .nav__list {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .header__burger, .header__close {
+        display: block;
+    }
+}
 
 @media screen and (max-width: 1024px) {
-    
+    section {
+        margin-bottom: 90px;
+    }
+
+    .block {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer {
+        padding-top: 87px;
+        padding-bottom: 81px;
+    }
+
+    .footer__container {
+        flex-wrap: wrap;
+    }
+
+    .footer__block {
+        width: 100%;
+    }
+
+    .footer__column {
+        padding: 0;
+    }
+
+    .footer__wrapper {
+        width: fit-content;
+        flex-direction: column;
+        gap: 60px;
+    }
+
+    .footer__image {
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 768px) {
-    
+    .header {
+        margin-top: 46px;
+        margin-bottom: 35px;
+    }
+
+    .header__logo {
+        width: 107px;
+    }
 }
 
 @media screen and (max-width: 576px) {
-    
+    section {
+        margin-bottom: 60px;
+    }
+
+    .container {
+        padding: 0 24px;
+    }
+
+    .header {
+        margin-top: 37px;
+        margin-bottom: 27px;
+    }
+
+    .footer {
+        padding-top: 42px;
+        padding-bottom: 65px;
+    }
+
+    .footer__container {
+        gap: 42px;
+    }
+
+    .footer__block {
+        flex-direction: column;
+        gap: 46px;
+    }
+
+    .footer__wrapper {
+        gap: 67px;
+    }
 }
