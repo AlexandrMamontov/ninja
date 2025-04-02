@@ -145,9 +145,77 @@ section {
 }
 
 .nav__link {
+    position: relative;
     display: block;
     font-size: 14px;
     line-height: 100%;
+}
+
+.nav__link::before {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: #DA3434;
+    transition: .3s ease-in-out;
+}
+
+.nav__link:focus {
+    outline: none;
+}
+
+.nav__link:focus::before {
+    width: 100%;
+    transition: .3s ease-in-out;
+}
+
+.nav__link:hover::before {
+    width: 100%;
+    transition: .3s ease-in-out;
+}
+
+.nav__link:active::before {
+    width: 0;
+    transition: .3s ease-in-out;
+}
+
+/* breadcrumbs */
+.breadcrumbs {
+    margin-top: -5px;
+    margin-bottom: 20px;
+}
+
+.breadcrumbs__wrapper {
+    padding: 12px 0 16px;
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.breadcrumbs__link,
+.breadcrumbs__wrapper span {
+    position: relative;
+    font-size: 14px;
+    line-height: 100%;
+    color: #12001A99;
+}
+
+.breadcrumbs__link::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -18px;
+    transform: translateY(-50%);
+    width: 14px;
+    height: 1px;
+    background-color: #12001A99;
+}
+
+.breadcrumbs__wrapper span {
+    color: #12001A;
 }
 
 /* footer */
@@ -201,6 +269,12 @@ section {
     line-height: 100%;
     color: #fff;
     white-space: nowrap;
+    transition: .3s ease-in-out;
+}
+
+.footer__link:hover {
+    color: #DA3434;
+    transition: .3s ease-in-out;
 }
 
 .footer__form {
@@ -221,6 +295,12 @@ section {
     font-size: 12px;
     line-height: 100%;
     color: #FFFFFF80;
+    transition: .3s ease-in-out;
+}
+
+.footer__input:hover {
+    border-color: #fff;
+    transition: .3s ease-in-out;
 }
 
 .footer__submit {
@@ -333,6 +413,10 @@ section {
     .header__logo {
         width: 107px;
     }
+
+    .breadcrumbs {
+        margin-top: 50px;
+    }
 }
 
 @media screen and (max-width: 576px) {
@@ -347,6 +431,11 @@ section {
     .header {
         margin-top: 37px;
         margin-bottom: 27px;
+    }
+
+    .breadcrumbs {
+        margin-top: 40px;
+        margin-bottom: 13px;
     }
 
     .footer {
@@ -365,5 +454,11 @@ section {
 
     .footer__wrapper {
         gap: 67px;
+    }
+}
+
+@media (hover: none) {
+    .nav__link:hover::before {
+        width: 0;
     }
 }
