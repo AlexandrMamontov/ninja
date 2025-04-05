@@ -68,6 +68,10 @@ section {
     white-space: nowrap;
 }
 
+.change-btn {
+    background-color: #812A9C;
+}
+
 .block {
     display: flex;
     align-items: center;
